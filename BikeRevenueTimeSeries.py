@@ -1,8 +1,4 @@
 # %% [markdown]
-# 1.0 Load Libraries ----
-# # Core Python Data Analysis
-
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -207,28 +203,14 @@ ggplot(mapping=aes(x = 'order_date',
          y = "Revenue")
 
 
-# 7.0 Writing Files ----
 
+# df.to_pickle("00_data_wrangled/bike_orders_clean_df.pkl")
+# # CSV ----
 
-# Pickle ----
+# df.to_csv("00_data_wrangled/bike_orders_clean_df.csv")
+# # Excel ----
+# df.to_excel("00_data_wrangled/bike_orders_clean_df.xlsx")
 
-df.to_pickle("00_data_wrangled/bike_orders_clean_df.pkl")
-# CSV ----
-
-df.to_csv("00_data_wrangled/bike_orders_clean_df.csv")
-# Excel ----
-df.to_excel("00_data_wrangled/bike_orders_clean_df.xlsx")
-
-
-# WHERE WE'RE GOING
-# - Building a forecast system
-# - Create a database to host our raw data
-# - Develop Modular Functions to:
-#   - Collect data
-#   - Summarize data and prepare for forecast
-#   - Run Automatic Forecasting for One or More Time Series
-#   - Store Forecast in Database
-#   - Retrieve Forecasts and Report using Templates
 
 
 # %%
