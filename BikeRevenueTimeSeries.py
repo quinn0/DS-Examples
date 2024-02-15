@@ -1,9 +1,3 @@
-# DS4B 101-P: PYTHON FOR DATA SCIENCE AUTOMATION ----
-# JUMPSTART (Module 1): First Sales Analysis with Python ----
-
-# Important VSCode Set Up:
-#   1. Select a Python Interpreter: ds4b_101p
-#   2. Delete terminals to start a fresh Python Terminal session
 # %% [markdown]
 # 1.0 Load Libraries ----
 # # Core Python Data Analysis
@@ -72,7 +66,6 @@ bike_orders_df = orderlines_df.\
     
 
 
-# 5.0 Wrangling Data ----
 df = bike_orders_df.copy()
 df["order.date"] = pd.to_datetime(df["order.date"])
 df.T
@@ -110,17 +103,12 @@ keep_ls = ['order.id',
 'frame_material']
 
 df  =df[keep_ls]
-df
-# * Renaming columns
 
 # 'order.date'.replace(".","_")
 
 df.columns = df.columns.str.replace(".", "_")
 bike_orders_clean_df = df
 # %%
-# 6.0 Visualizing a Time Series ----
-# mkdir("00_data_wrangled")
-# bike_orders_clean_df.to_pickle("00_data_wrangled/bike_orders_clean_df.pkl")
 # %%
 df = pd.read_pickle("00_data_wrangled/bike_orders_clean_df.pkl")
 # 6.1 Total Sales by Month ----
@@ -154,13 +142,7 @@ ggplot(aes(x = 'order_date',
          y = "Revenue") + \
     expand_limits(y = 0)
             
-# %%
 
-
-# 6.2 Sales by Year and Category 2 ----
-
-# ** Step 1 - Manipulate ----
-# %%
 sales_by_month_df = df[["terrain2", "order_date", "total_price"]]\
     .set_index("order_date")\
     .groupby('terrain2') \
@@ -230,11 +212,12 @@ ggplot(mapping=aes(x = 'order_date',
 
 # Pickle ----
 
-
+df.to_pickle("00_data_wrangled/bike_orders_clean_df.pkl")
 # CSV ----
 
-
+df.to_csv("00_data_wrangled/bike_orders_clean_df.csv")
 # Excel ----
+df.to_excel("00_data_wrangled/bike_orders_clean_df.xlsx")
 
 
 # WHERE WE'RE GOING
