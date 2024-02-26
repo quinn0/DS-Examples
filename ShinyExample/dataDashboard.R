@@ -1,0 +1,1 @@
+##Compile plotly and kmeans or PCA given an R or kaggle dataset
