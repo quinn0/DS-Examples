@@ -1,0 +1,12 @@
+name: Poke-Cluster
+title: Poke-Cluster
+username: anotherisms
+account: anotherisms
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11339631
+bundleId: 8301799
+url: https://anotherisms.shinyapps.io/Poke-Cluster/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
