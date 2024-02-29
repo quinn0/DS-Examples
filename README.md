@@ -1,1 +1,1 @@
-[Pokecluster Dashaboard](https://anotherisms.shinyapps.io/Poke-Cluster/)
+[Pokecluster Dashboard](https://anotherisms.shinyapps.io/Poke-Cluster/)
